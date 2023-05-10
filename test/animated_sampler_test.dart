@@ -23,7 +23,7 @@ void main() {
 
   testWidgets('starts calling builder once enabled', (tester) async {
     final AnimatedSamplerBuilder builder =
-        expectAsync4((image, size, offset, canvas) {}, count: 1);
+        expectAsync3((image, size, canvas) {}, count: 1);
 
     await tester.pumpWidget(
       MaterialApp(
@@ -48,7 +48,7 @@ void main() {
 
   testWidgets('rebuilds when child layer is updated', (tester) async {
     final AnimatedSamplerBuilder builder =
-        expectAsync4((image, size, offset, canvas) {}, count: 2);
+        expectAsync3((image, size, canvas) {}, count: 2);
 
     await tester.pumpWidget(
       MaterialApp(
