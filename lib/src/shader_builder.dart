@@ -8,7 +8,10 @@ import 'package:flutter/widgets.dart';
 
 /// A callback used by [ShaderBuilder].
 typedef ShaderBuilderCallback = Widget Function(
-    BuildContext, ui.FragmentShader, Widget?);
+  BuildContext context,
+  ui.FragmentShader shader,
+  Widget? child,
+);
 
 /// A widget that loads and caches [FragmentProgram]s based on the asset key.
 ///
